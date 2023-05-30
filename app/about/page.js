@@ -1,98 +1,44 @@
-import Image from 'next/image'
-import styles from './../page.module.css'
-import Link from 'next/link';
+"use client";
+import { Table } from "@nextui-org/react";
 
-export default function About() {
+export default function App() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Develop by&nbsp;
-          <code className={styles.code}>CoMiKx</code>
-          &nbsp;with&nbsp;
-          <code className={styles.code}>NEXT.JS</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://google.com"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Torque <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <Link 
-          href="/about"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </Link>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <Table
+      aria-label="Example static collection table with multiple selection"
+      css={{
+        height: "auto",
+        minWidth: "100%",
+        backgroundColor: "#dbeafe"
+      }}
+      selectionMode="multiple"
+    >
+      <Table.Header>
+        <Table.Column>NAME</Table.Column>
+        <Table.Column>ROLE</Table.Column>
+        <Table.Column>STATUS</Table.Column>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row key="1">
+          <Table.Cell>Baramee Sukhong</Table.Cell>
+          <Table.Cell>CEO</Table.Cell>
+          <Table.Cell>Active</Table.Cell>
+        </Table.Row>
+        <Table.Row key="2">
+          <Table.Cell>P mai</Table.Cell>
+          <Table.Cell>Sale</Table.Cell>
+          <Table.Cell>Paused</Table.Cell>
+        </Table.Row>
+        <Table.Row key="3">
+          <Table.Cell>P wong</Table.Cell>
+          <Table.Cell>Comedian 1</Table.Cell>
+          <Table.Cell>Active</Table.Cell>
+        </Table.Row>
+        <Table.Row key="4">
+          <Table.Cell>P mook</Table.Cell>
+          <Table.Cell>Comedian 2</Table.Cell>
+          <Table.Cell>Vacation</Table.Cell>
+        </Table.Row>
+      </Table.Body>
+    </Table>
+  );
 }
