@@ -43,15 +43,15 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://google.com"
+          href="/torque"
           className={styles.card}
-          target="_blank"
+          //target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
             Torque <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          <p>Find information about Torque.</p>
         </a>
 
         <a 
@@ -61,21 +61,21 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2>
-            Learn <span>-&gt;</span>
+            Templates <span>-&gt;</span>
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          <p>Template</p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/template"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Templates <span>-&gt;</span>
+            Dont Click <span>-&gt;</span>
           </h2>
-          <p>Explore the Next.js 13 playground.</p>
+          <p>How dare you.</p>
         </a>
 
         <a
